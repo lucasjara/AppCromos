@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCromos.Apps.Login">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="Captura.PNG" HorizontalOptions="Center" Margin="10,100,10,10"></Image>
+            <Label Text="INGRESE NICKNAME" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"></Label>
+            <Entry TextTransform="Uppercase" Margin="60,0,60,0" MaxLength="30" x:Name="txtNickName" Text="ZOIDIANO"></Entry>
+            <Button BackgroundColor="Blue" TextColor="White" Text="INICIAR" Margin="50,10,50,0" x:Name="btnInicio" Clicked="btnInicio_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

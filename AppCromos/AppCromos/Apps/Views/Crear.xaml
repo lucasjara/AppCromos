@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCromos.Apps.Views.Crear"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="15" CornerRadius="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="35" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="50" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="idea" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
+                    <Label Text="CREAR CROMO" HorizontalTextAlignment="Start" TextColor="White" FontSize="Large" Grid.Row="0" Grid.Column="1"/>
+                    <ImageButton Source="cloud"  VerticalOptions="CenterAndExpand" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" HeightRequest="32" WidthRequest="32"  BackgroundColor="#2196F3" Clicked="ImageButton_Clicked"></ImageButton>
+                </Grid>
+            </Frame>
+            <Label Text="DATOS" TextColor="Black" Margin="10,1,1,1" FontAttributes="Bold" FontSize="Medium" />
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"/>
+            <Label Text="NICKNAME" TextColor="Black" Margin="10,1,1,1" FontSize="Small" x:Name="txtTituloNickName" />
+            <Label Text="N°" TextColor="Black" Margin="10,1,1,1" FontSize="Small" x:Name="txtTituloNumero" />
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"/>
+            <Label Text="SELECCIONAR TEMA" TextColor="Black" Margin="10,1,1,1" FontAttributes="Bold" FontSize="Medium" />
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"/>
+            <input:RadioButtonGroupView Margin="10,0,0,0" >
+                <input:RadioButton Text="MODO INFEST" IsChecked="True" Margin="5,0,0,0" />
+                <input:RadioButton Text="MODO STEAM" Margin="5,0,0,0" />
+            </input:RadioButtonGroupView>
+            <Button Text="SELECCIONAR ARCHIVO" ContentLayout="Left,5" Image="plus" BackgroundColor="#2196F3" Margin="10,0,10,0" FontSize="Large" TextColor="White" />
+            <Image Source="camara.png" HorizontalOptions="Center" HeightRequest="200">
+                
+            </Image>
+            <Entry TextTransform="Uppercase" Margin="60,0,60,0" MaxLength="30" x:Name="txtTexto" Placeholder="INGRESE TEXTO" HorizontalTextAlignment="Center"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
