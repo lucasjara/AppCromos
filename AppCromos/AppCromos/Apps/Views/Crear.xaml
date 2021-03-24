@@ -17,7 +17,7 @@
                     </Grid.ColumnDefinitions>
                     <Image Source="idea" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Grid.Row="0" Grid.Column="0" />
                     <Label Text="CREAR CROMO" HorizontalTextAlignment="Start" TextColor="White" FontSize="Large" Grid.Row="0" Grid.Column="1"/>
-                    <ImageButton Source="cloud"  VerticalOptions="CenterAndExpand" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" HeightRequest="32" WidthRequest="32"  BackgroundColor="#2196F3"></ImageButton>
+                    <ImageButton Source="cloud"  VerticalOptions="CenterAndExpand" HorizontalOptions="End" Grid.Row="0" Grid.Column="2" HeightRequest="32" WidthRequest="32"  BackgroundColor="#2196F3" Clicked="ImageButton_Clicked"></ImageButton>
                 </Grid>
             </Frame>
             <Label Text="DATOS" TextColor="Black" Margin="10,1,1,1" FontAttributes="Bold" FontSize="Medium" />
@@ -29,7 +29,7 @@
                 <Label Text="SELECCIONAR TEMA" TextColor="Black" Margin="10,1,1,1" FontAttributes="Bold" FontSize="Medium" />
                 <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" Color="Gray"/>
                 <input:RadioButtonGroupView Margin="10,0,0,0" >
-                    <input:RadioButton Text="MODO INFEST" IsChecked="True" Margin="5,0,0,0" />
+                    <input:RadioButton Text="MODO INFEST" IsChecked="True" Margin="5,0,0,0" x:Name="ModoInfest" />
                     <input:RadioButton Text="MODO STEAM" Margin="5,0,0,0" />
                 </input:RadioButtonGroupView>
                 <Entry TextTransform="Uppercase" Margin="60,0,60,0" MaxLength="30" x:Name="txtTexto" Placeholder="INGRESE TEXTO" HorizontalTextAlignment="Center"></Entry>
@@ -51,7 +51,7 @@
                             <RowDefinition Height="400" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        <Image  Source="plantillainfest.png" HeightRequest="400" Aspect="AspectFill">
+                        <Image  Source="plantillainfest.png" HeightRequest="400" Aspect="AspectFill" x:Name="Plantilla">
 
                         </Image>
                         <Image  Source="camara.png" HeightRequest="260" VerticalOptions="Start" x:Name="Imagen" Aspect="AspectFill" Margin="32,40,38,0">
@@ -59,7 +59,7 @@
                         </Image>
                         <Label
                             Margin="40,20,0,0"
-                            Text="LICENCIA Y PARA LA CASA" x:Name="txtImagen" TextColor="White" FontAttributes="Bold" />
+                            Text="" x:Name="txtImagen" TextColor="White" FontAttributes="Bold" />
                     </Grid>
                 </Frame>
             </StackLayout>
